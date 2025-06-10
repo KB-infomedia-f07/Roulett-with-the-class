@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roulett-with-the-class", "Roulett-with-the-class.csproj", "{BC995484-331B-49AF-BE90-62269CCFF1E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC995484-331B-49AF-BE90-62269CCFF1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC995484-331B-49AF-BE90-62269CCFF1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC995484-331B-49AF-BE90-62269CCFF1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC995484-331B-49AF-BE90-62269CCFF1E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61096F7A-625A-41D8-877C-E52D8FE2EFC2}
+	EndGlobalSection
+EndGlobal
