@@ -3,7 +3,7 @@
         //TODO: create a working roulett program
         Random rand = new Random();
 
-        int hasMoney = true;
+        bool hasMoney = true;
         int money = 100;
         int bet = 0;
 
@@ -18,10 +18,10 @@
                 continue;
             }
 
-            if (money > 0)
+            if (money < 0)
             {
-                Console.WriteLine("Uh oh...You are out of money. You CANT GAMBLE! GET OUT!")
-                Thread.Sleep(2500)
+                Console.WriteLine("Uh oh...You are out of money. You CANT GAMBLE! GET OUT!");
+                Thread.Sleep(2500);
                 hasMoney = false;
                 break;
             }
@@ -36,11 +36,13 @@
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine("You can only write a number that is your balance or lower")
+                        Console.WriteLine("You can only write a number that is your balance or lower");
                     }
                     money = money - bet;
                     break;
                 }
+
+
 
             }
         }
