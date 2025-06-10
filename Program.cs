@@ -1,7 +1,7 @@
 ﻿class Program {
     public static void Main(string[] args) {
         //TODO: create a working roulett program
-
+        int number
         bool game = true;
         bool betting = true;
         string answer;
@@ -22,7 +22,46 @@
                 //OLIKA TYPER AV BETTING
                 switch (type)
                 {
+                    case 1:
+                        Console.WriteLine("Vilket nummer vill du betta på?");
+                        while (true)
+                        {
+                            number = Convert.ToInt32(Console.ReadLine());
+                            try
+                            {
+                                if (number >= 37 || number < 0)
+                                {
+                                    Console.WriteLine("Ogiltigt nummer");
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("Endast giltiga nummer tillåts");
+                            }
+                            Thread.Sleep(1500);
+                            Console.Clear();
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Vilken färg vill du betta på?");
+                        while (true)
+                        {
+                            answer = Console.ReadLine();
+                            if (answer.ToLower() == "röd")
+                            {
+                                color = 1;
+                            }
+                            else if (answer.ToLower() == "svart")
+                            {
 
+                            }
+                            
+                        }
+                        break;
                 }
             
             }
