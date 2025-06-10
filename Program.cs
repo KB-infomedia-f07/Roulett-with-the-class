@@ -2,8 +2,6 @@
 {
     public static void Main(string[] args)
     {
-        //TODO: create a working roulett program
-
         int playerCash = 100;
         Random rand = new Random();
         int playerNumber = 0;
@@ -16,39 +14,70 @@
 
         while (isPlaying)
         {
-            //Användaren skriver vilket nummer som den vill betta på
-            Console.WriteLine("Type Bet HERE (1 - 36):\n");
+            if (playerCash <= 0)
+            {
+                Console.WriteLine("Du har inga pengar kvar! Spelet avslutas.");
+                break;
+            }
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("|===================================================================================================|");
+            Console.WriteLine("|                                                                                                   |");
+            Console.WriteLine("|        :::::::::   ::::::::  :::    ::: :::        :::::::::: ::::::::::: ::::::::::: ::::::::::  |");
+            Console.WriteLine("|       :+:    :+: :+:    :+: :+:    :+: :+:        :+:            :+:         :+:     :+:          |");
+            Console.WriteLine("|      +:+    +:+ +:+    +:+ +:+    +:+ +:+        +:+            +:+         +:+     +:+           |");
+            Console.WriteLine("|     +#++:++#:  +#+    +:+ +#+    +:+ +#+        +#++:++#       +#+         +#+     +#++:++#       |");
+            Console.WriteLine("|    +#+    +#+ +#+    +#+ +#+    +#+ +#+        +#+            +#+         +#+     +#+             |");
+            Console.WriteLine("|   #+#    #+# #+#    #+# #+#    #+# #+#        #+#            #+#         #+#     #+#              |");
+            Console.WriteLine("|  ###    ###  ########   ########  ########## ##########     ###         ###     ##########        |");
+            Console.WriteLine("|                                                                                                   |");
+            Console.WriteLine("|===================================================================================================|");
+
+
+
+
+
+
+
+            Console.WriteLine("Type Bet HERE (1 - 36):");
             playerNumber = Convert.ToInt32(Console.ReadLine());
-            //Hur mycket pengar på detta nmummret
+
             Console.WriteLine($"Type Amount of Cash! 10x Payout. (You have {playerCash})");
             playerBet = Convert.ToInt32(Console.ReadLine());
+
+            if (playerBet > playerCash || playerBet <= 0)
+            {
+                Console.WriteLine("Ogiltig insats. Försök igen.");
+                continue;
+            }
+
             playerCash -= playerBet;
-            //Slumpa nummer
+
             roll = rand.Next(0, 37);
-            //Win: 10x Payout
+
             if (roll == playerNumber)
             {
                 playerCash += playerBet * 10;
                 Console.WriteLine($"Du vann! Nu har du {playerCash}");
             }
-            else //Loss Lose cash
+            else 
             {
-                playerCash -= playerBet;
                 Console.WriteLine($"Du förlorade! Nu har du {playerCash}");
             }
+
             Console.WriteLine("Vill du spela igen? Ja/Nej");
             answer = Console.ReadLine();
-          /*  if (answer.ToLower == "nej")
+            if (answer.ToLower() == "nej")
             {
+                
+                Console.WriteLine("Hejdå!");
+
                 isPlaying = false;
                 break;
             }
-          */
-            hasWon = false;
 
+            hasWon = false;
         }
     }
-
 }
-
 
