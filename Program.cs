@@ -9,12 +9,13 @@
         int val2 = false;
         int val 3 = false;
 
-        Console.WriteLine("Välkommen in! Sätt dig ner och spela en sväng roulette! Du KOMMER att förlora tillslut, bara så du vet!")
+        Console.WriteLine("Välkommen in! Sätt dig ner och spela en sväng roulette! Du KOMMER att förlora tillslut, bara så du vet!");
 
         while (pengar > 0 && avsluta != true)
         {
-            Console.WriteLine("Så då, vad vill du göra?")
-
+            Console.WriteLine("Så då, vad vill du göra?");
+            Console.WriteLine("Välj ett nummer eller en färg");
+            input = Console.ReadLine();
         }
     }
 }
